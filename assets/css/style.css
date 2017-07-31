@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+
+
+body{
+	padding-top: 15px;
+	background-color: #252425; /* Dark Grey */
+}
+
+h1{
+	font-family: 'Roboto', sans-serif;
+	font-size: 64px;
+	text-align: center;
+	color: #BDD3F1; /* Light Blue */
+}
+
+p{
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	color: #F4F4F4; /* Off White */
+}
+
+button{
+	margin: 10px;
+	padding: 7px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	color: #921B20; /* Burgundy */
+	font-size: 24px;
+	background-color: #F4F4F4; /* Off White */
+	border-radius: 8px;
+	border: 3px solid #BDD3F1; /* Light Blue */
+}
+
+img {
+    border: 3px solid #F4F4F4; /* Off White */
+    border-radius: 8px;
+    padding: 0px;
+}
+
+#leftSide{
+	width: 75%;
+	float: left;
+}
+
+#rightSide{
+	width: 25%;
+	float: right;
+}
+
+.textFormat{
+	font-family: 'Roboto', sans-serif;
+	font-size: 24px;
+	color: #F4F4F4; /* Off White */
+}
+
+#addTheme{
+	margin: 10px;
+	padding: 7px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	color: #921B20; /* Burgundy */
+	font-size: 24px;
+	background-color: #F4F4F4; /* Off White */
+	border-radius: 8px;
+	border: 3px solid #BDD3F1; /* Light Blue */
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
