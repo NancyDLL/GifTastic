@@ -1,0 +1,1 @@
+console.log("The js file for GifTastic is connected.")
