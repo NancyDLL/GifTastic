@@ -19,8 +19,9 @@ function renderButtons() {
 renderButtons(topics);
 
 // Function that on click of the character buttons queries the giphy API
-$("button").on("click", function() {
+$("#themeButtons").on("click", "button", function() {
 	console.log(this);
+
 	var name = $(this).attr("data-name");
 	var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
         name + "&api_key=417be88504ad4ce597509bda6982daab&limit=10";
@@ -35,10 +36,12 @@ $("button").on("click", function() {
     			var gifDiv = $("<div class='item'>");
     			var rating = results[j].rating;
     			var p = $("<p>").text("Rating: " + rating);
-    			var personImage = $("<img>");
-    			personImage.attr("src", results[j].images.fixed_width_still.url);
+    			var personStill = $("<img>");
+    			var personAnimate = $("<img>");
+    			personStill.attr("src", results[j].images.fixed_width_still.url);
+    			personAnimate.attr("src", results[j].images.fixed_width.url);
     			gifDiv.append(p);
-    			gifDiv.append(personImage);
+    			gifDiv.append(personStill);
     			$("#gifsGoHere").prepend(gifDiv);
     		}
     	}
