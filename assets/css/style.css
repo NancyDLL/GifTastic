@@ -1,74 +1,108 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+/*-----------------INDEX---------------------*/
+  /*** 1.0 BOX SIZING ***/
+  /*** 2.0 TEXT & FONTS ***/
+  /*** 3.0 PAGE CONSTRUCTION ***/
+  /*** 4.0 MAIN-SECTION & BUTTONS ***/
+  /*** 5.0 SIDEBAR & FORM ***/
+  /*** 6.0 IMAGES ***/
+/*-------------------------------------------*/
 
-
-
-body{
-	padding-top: 15px;
-	background-color: #252425; /* Dark Grey */
+/*** 1.0 BOX SIZING ***/
+* {
+  box-sizing: border-box;
 }
+/* this keeps border and padding inside the box measurement */
 
+/*** 2.0 TEXT & FONTS ***/
 h1{
 	font-family: 'Roboto', sans-serif;
 	font-size: 64px;
 	text-align: center;
 	color: #BDD3F1; /* Light Blue */
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
-
 p{
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
 	color: #F4F4F4; /* Off White */
 }
+.textFormat{
+	font-family: 'Roboto', sans-serif;
+	font-size: 22px;
+	color: #F4F4F4; /* Off White */
+}
 
+/*** 3.0 PAGE CONSTRUCTION ***/
+body{
+	background-color: #252425; /* Dark Grey */
+}
+
+/*** 4.0 MAIN & BUTTONS ***/
+#main-container {
+  width: 100%;
+  height: 200px;
+  border-bottom-width: 5px;
+  border-bottom-style: solid;
+  border-bottom-color: #BDD3F1; /* Light Blue */
+  margin-bottom: 10px;
+
+}
+.main-section {
+  float: left;
+  max-width: 900px;
+  padding-left: 20px;
+  padding-right: 20px;
+ }
 button{
+  clear: both;
 	margin: 10px;
 	padding: 7px;
 	font-family: 'Roboto', sans-serif;
 	font-weight: bold;
 	color: #921B20; /* Burgundy */
-	font-size: 24px;
+	font-size: 18px;
 	background-color: #F4F4F4; /* Off White */
 	border-radius: 8px;
 	border: 3px solid #BDD3F1; /* Light Blue */
 }
 
-img {
-    border: 3px solid #F4F4F4; /* Off White */
-    border-radius: 8px;
-    padding: 0px;
+/*** 5.0 SIDEBAR & FORM ***/
+.sidebar {
+  float: right;
+  width: 300px;
+  padding: 10px;
+  margin-right: 50px;
+  border: 1px solid #ddd;
 }
-
-#leftSide{
-	width: 75%;
-	float: left;
-}
-
-#rightSide{
-	width: 25%;
-	float: right;
-}
-
-.textFormat{
-	font-family: 'Roboto', sans-serif;
-	font-size: 24px;
-	color: #F4F4F4; /* Off White */
-}
-
 #addTheme{
 	margin: 10px;
 	padding: 7px;
 	font-family: 'Roboto', sans-serif;
 	font-weight: bold;
 	color: #921B20; /* Burgundy */
-	font-size: 24px;
+	font-size: 16px;
 	background-color: #F4F4F4; /* Off White */
 	border-radius: 8px;
 	border: 3px solid #BDD3F1; /* Light Blue */
 }
-
 input[type=text] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
+  width: 100%;
+  height: 25px;
+  padding: 20px;
+  margin: 8px 0;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/*** 6.0 IMAGES ***/
+.item{
+  display:inline-block;
+}
+img {
+  vertical-align: text-top;
+  border: 3px solid #F4F4F4; /* Off White */
+  border-radius: 8px;
+  margin: 10px;
 }

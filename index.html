@@ -15,8 +15,7 @@
 
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
-  <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
@@ -25,21 +24,21 @@
 
   <h1>Star Wars Gif-tastic!</h1>
 
-  <div id="leftSide">
-    <div id="themeButtons"></div>
+  <div id="main-container">
+    <section class="main-section">
+      <div id="themeButtons"></div>
+    </section>
+
+    <section class="sidebar">
+      <form id="theme-form">
+        <label class="textFormat" for="theme-input">Add a Star Wars character!</label>
+        <input type="text" id="theme-input"><br>
+        <input id="addTheme" type="submit" value="Submit">
+      </form>
+    </section>
   </div>
 
-  <div id="rightSide">
-    <form id="theme-form">
-      <label class="textFormat" for="theme-input">Add a Star Wars character!</label>
-      <input type="text" id="theme-input"><br>
-      <input id="addTheme" type="submit" value="Submit">
-    </form>
-  </div>
-
-  <div id="gifsGoHere">
-    
-  </div>
+  <div id="gifsGoHere"></div>
 
   <script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>

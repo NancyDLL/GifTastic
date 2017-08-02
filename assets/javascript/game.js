@@ -28,8 +28,8 @@ $("#themeButtons").on("click", "button", function() {
     $.ajax({
         url: queryURL,
         method: "GET"
-    })
-    .done(function(response) {
+    }).done(function(response) {
+        console.log(response);
     	var results = response.data;
     	for (var j = 0; j < results.length; j++) {
     		if (results[j].rating !== "r" && results[j].rating !== "pg-13") {
@@ -53,13 +53,27 @@ $("#themeButtons").on("click", "button", function() {
 $(".gif").on("click", function() {
     var state = $(this).attr("data-state");
     if (state === "still") {
-	    $(this).attr("src", $(this).attr("data-animate"));
-	    $(this).attr("data-state", "animate");
+        $(this).attr("src", $(this).attr("data-animate"));
+        $(this).attr("data-state", "animate");
     } else {
         $(this).attr("src", $(this).attr("data-still"));
         $(this).attr("data-state", "still");
     }
 });
+
+      // function swapGif() {
+      //   var state = $(this).index();
+      //   if (gifToggle === false) {
+      //   $(this).find("img").attr("src",responseCopy.data[state].images.fixed_height.url);
+      //   gifToggle = true;
+      // } else {
+      //   $(this).find("img").attr("src",responseCopy.data[state].images.fixed_height_still.url);
+      //   gifToggle = false;
+      //   }
+        
+      // };
+
+//       
 
 // Function that on click of submit a new button is created (push to array).
 $("#addTheme").on("click", function(event) {
@@ -89,5 +103,5 @@ $("#addTheme").on("click", function(event) {
 // √ 5.2 limit = The maximum number of records to return - 10 is the assignment requirement.
 // √ 5.3 rating = Filters results by specified rating (assume assignment removes any r rated).
 // 5.4 fixed_width = Width set to 200px - animated
-// 5.5 fixed_width_still = Static preview image for fixed_width.
+// √ 5.5 fixed_width_still = Static preview image for fixed_width.
 // √ 6.0 request my own API key = 417be88504ad4ce597509bda6982daab
