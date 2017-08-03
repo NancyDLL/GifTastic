@@ -43,37 +43,18 @@ $("#themeButtons").on("click", "button", function() {
     			gifDiv.append(p);
     			gifDiv.append(personStill);
     			$("#gifsGoHere").prepend(gifDiv);
+                $(".gif").on("click", function() {
+                    if (personStill) {
+                        $("<img>").append(personAnimate);
+                    } else {
+                        $("<img>").append(personStill);
+                    }
+                });
     		}
     	}
     });
 });
-
-// Function to animate gifs when they are clicked
-// Need to get these attributes from the query call.
-$(".gif").on("click", function() {
-    var state = $(this).attr("data-state");
-    if (state === "still") {
-        $(this).attr("src", $(this).attr("data-animate"));
-        $(this).attr("data-state", "animate");
-    } else {
-        $(this).attr("src", $(this).attr("data-still"));
-        $(this).attr("data-state", "still");
-    }
-});
-
-      // function swapGif() {
-      //   var state = $(this).index();
-      //   if (gifToggle === false) {
-      //   $(this).find("img").attr("src",responseCopy.data[state].images.fixed_height.url);
-      //   gifToggle = true;
-      // } else {
-      //   $(this).find("img").attr("src",responseCopy.data[state].images.fixed_height_still.url);
-      //   gifToggle = false;
-      //   }
-        
-      // };
-
-//       
+  
 
 // Function that on click of submit a new button is created (push to array).
 $("#addTheme").on("click", function(event) {
