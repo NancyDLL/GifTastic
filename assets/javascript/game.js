@@ -59,7 +59,7 @@ $(document).on('click','.searchImage',function(){
 
 
 // Function from video added line by line but did not work
-$('#addSearch').on('click',function(){
+$('#addTheme').on('click',function(){
     var newSearch = $('input').eq(0).val();
     searchArray.push(newSearch);
     renderButtons(searchArray,'searchButton','#buttonsArea');
