@@ -22,7 +22,7 @@ function renderButtons(searchArray,classToAdd,areaToAddTo){
 // Function that on click of the character buttons queries the giphy API
 $(document).on('click','.searchButton',function(){
     var type = $(this).data('type');
-    var queryURL = "http://api.giphy.com/v1/gifs/search?q="+
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q="+
     type+"&api_key=417be88504ad4ce597509bda6982daab&limit=10";
     $.ajax({url: queryURL,method: "GET"})
     .done(function(response) {
