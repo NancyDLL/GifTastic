@@ -22,7 +22,7 @@ renderButtons(topics);
 $("#themeButtons").on("click", "button", function() {
 	console.log(this);
 
-	var name = $(this).attr("data-name");
+	var name = $(this).data("name");
 	var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
         name + "&api_key=417be88504ad4ce597509bda6982daab&limit=10";
     $.ajax({
@@ -33,23 +33,19 @@ $("#themeButtons").on("click", "button", function() {
     	var results = response.data;
     	for (var j = 0; j < results.length; j++) {
     		if (results[j].rating !== "r" && results[j].rating !== "pg-13") {
-    			var gifDiv = $("<div class='item'>");
     			var rating = results[j].rating;
     			var p = $("<p>").text("Rating: " + rating);
-    			var personStill = $("<img>");
-    			var personAnimate = $("<img>");
-    			personStill.attr("src", results[j].images.fixed_width_still.url);
-    			personAnimate.attr("src", results[j].images.fixed_width.url);
+    			var personStill = results[j].images.fixed_width_still.url;
+    			var personAnimate = results[j].images.fixed_width.url;
+                var image = $('<img>');
+                image.attr('src',personStill);
+                image.attr('data-personStill',personStill);
+                image.attr('data-personAnimate',personAnimate);
+                image.attr('data-state',"still");
+                var gifDiv = $("<div class='item'>");
     			gifDiv.append(p);
-    			gifDiv.append(personStill);
+    			gifDiv.append(image);
     			$("#gifsGoHere").prepend(gifDiv);
-                $(".gif").on("click", function() {
-                    if (personStill) {
-                        $("<img>").append(personAnimate);
-                    } else {
-                        $("<img>").append(personStill);
-                    }
-                });
     		}
     	}
     });
@@ -62,6 +58,7 @@ $("#addTheme").on("click", function(event) {
 	var topic = $("#theme-input").val().trim();
 	topics.push(topic);
 	renderButtons(topics);
+    $("#theme-form")[0].reset();
 });
 
 // * * * PSUEDOCODE & REQUIREMENTS * * *
