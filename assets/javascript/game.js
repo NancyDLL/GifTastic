@@ -1,7 +1,7 @@
 console.log("The js file for GifTastic is connected.")
 
 //Global Variable
-var topics = ["kylo ren", "boba fett", "han solo", "chewbacca", "darth maul", "C-3PO"];
+var topics = ["Kylo Ren", "Boba Fett", "Han Solo", "Chewbacca", "Darth Maul", "C-3PO"];
 
 //Create function that loops through topic array and creates the buttons.
 function renderButtons() {

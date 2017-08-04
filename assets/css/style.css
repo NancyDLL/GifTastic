@@ -39,24 +39,26 @@ body{
 	background-color: #252425; /* Dark Grey */
 }
 
+.borderThatFloats{
+  width: 100%;
+  height: 5px;
+  background-color: #BDD3F1; /* Light Blue */
+  margin-bottom: 10px;
+  clear: both;
+}
+
 /*** 4.0 MAIN & BUTTONS ***/
 #main-container {
   width: 100%;
-  height: 200px;
-  border-bottom-width: 5px;
-  border-bottom-style: solid;
-  border-bottom-color: #BDD3F1; /* Light Blue */
   margin-bottom: 10px;
-
 }
 .main-section {
   float: left;
-  max-width: 900px;
+  max-width: 70%;
   padding-left: 20px;
   padding-right: 20px;
  }
 button{
-  clear: both;
 	margin: 10px;
 	padding: 7px;
 	font-family: 'Roboto', sans-serif;
@@ -66,14 +68,16 @@ button{
 	background-color: #F4F4F4; /* Off White */
 	border-radius: 8px;
 	border: 3px solid #BDD3F1; /* Light Blue */
+  clear: both;
 }
 
 /*** 5.0 SIDEBAR & FORM ***/
 .sidebar {
   float: right;
-  width: 300px;
+  width: 25%;
   padding: 10px;
   margin-right: 50px;
+  margin-bottom: 20px;
   border: 1px solid #ddd;
 }
 #addTheme{
